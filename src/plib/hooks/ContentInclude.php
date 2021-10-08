@@ -20,29 +20,6 @@ function f2bunbanIP($ip) {
 }
 
 class Modules_fail2banalert_ContentInclude extends pm_Hook_ContentInclude {
-
-    public function getJsConfig() {
-        //if (!isset($_GET['f2bunban'])) {
-            //$check_result = f2bcheckIP($_SERVER['REMOTE_ADDR']);
-
-            //if (count($check_result['Jails']) > 0) {
-                //$result['MessageType'] = 'error';
-                //$result['Message'] = pm_Locale::lmsg('banned', ['ip' => $_SERVER['REMOTE_ADDR']]);
-                //foreach ($check_result['Jails'] as $jail) {
-                    //$result['Message'] .= pm_Locale::lmsg($jail);
-                //}
-                //$result['Message'] .= '<a href="?f2bunban">'.pm_Locale::lmsg('link').'</a>';
-            //}
-        //} else {
-            //f2bunbanIP($_SERVER['REMOTE_ADDR']);
-            //$result['MessageType'] = 'info';
-            //$result['Message'] = 'Your IP ('.$_SERVER['REMOTE_ADDR'].') was unbanned.';
-        //}
-        //return $result;
-
-        return '';
-    }
-
     public function getJsOnReadyContent()
     {
         if (!isset($_GET['f2bunban'])) {
@@ -67,15 +44,5 @@ class Modules_fail2banalert_ContentInclude extends pm_Hook_ContentInclude {
         } else {
             return '';
         }
-    }
-
-    public function getHeadContent()
-    {
-        return '';
-    }
-
-    public function getBodyContent()
-    {
-        return '';
     }
 }
