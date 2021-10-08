@@ -3,7 +3,7 @@
   <id>fail2ban-alert</id>
   <name>fail2ban alert</name>
   <description>Shows you and your plesk users an alert if the own ip address is banned by fail2ban, with additional information and the option to unban it.</description>
-  <version>0.1</version>
+  <version>1</version>
   <release>1</release>
   <vendor/>
   <url>https://github.com/darkretailer/plesk_ext-fail2ban-alert</url>
